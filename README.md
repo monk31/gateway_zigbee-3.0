@@ -11,6 +11,19 @@ To communicate with zigbee device, I choose a excellent application : "IOT on of
 or playstore
 see this link : https://www.iot-onoff.com/ for more details
 
+this project has build with three binary and one script in python
+
+see Wiki for installation with a raspberry pi3
+
+you must configure broker adress to set your smartphone
+
+you can download "Net Analyser" to scan your network at home
+
+I do a summary of topic that you can configure with your smartphone
+
+## topic state  -> "/sensor/state" + id device  : to know the feedback state of your smart plus or lamp
+
+## topic tmemperature -> "sensor/tmp" + id device
 
 
 
