@@ -24,8 +24,7 @@ you must configure broker adress to set your smartphone
 
 you can download "Net Analyser" to scan your network at home
 
-
-https://github.com/monk31/gateway_zigbee/issues/1#issue-486560607
+![IMG_1367](https://user-images.githubusercontent.com/13630510/63885449-acc19f00-c9d8-11e9-9ec0-f208ed234d65.png)
 
 
 
