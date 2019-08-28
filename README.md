@@ -15,16 +15,26 @@ this project has build with three binary and one script in python
 
 see Wiki for installation with a raspberry pi3
 
-Three kinds of device can be appairing in the zigbee network
-
-
-
-
+you can download "Net Analyser" to scan your network at home
 you must configure broker adress to set your smartphone
 
-you can download "Net Analyser" to scan your network at home
+Three kinds of device can be appairing in the zigbee network :
+xiaomi smart plug
+xiaomi device sensor temperature
+lamp hue
 
 ![IMG_1367](https://user-images.githubusercontent.com/13630510/63885449-acc19f00-c9d8-11e9-9ec0-f208ed234d65.png)
+
+
+# Appairing Device
+
+to appair device in the network
+
+use the topic "cmd/join" with payload ="23", after you are 180 s to appair the device
+
+for the smart plug , press 5 s on the button
+
+
 
 
 
