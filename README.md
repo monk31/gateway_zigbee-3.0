@@ -21,12 +21,14 @@ xiaomi smart plug
 xiaomi device sensor temperature
 lamp hue or compatible
 
+see the users manual
+
 ![IMG_1367](https://user-images.githubusercontent.com/13630510/63885449-acc19f00-c9d8-11e9-9ec0-f208ed234d65.png)
 
 
-# Appairing Device
+https://user-images.githubusercontent.com/13630510/63886865-b8fb2b80-c9db-11e9-8237-005ec9a60f6e.png
 
-to appair device in the network, see the users manual
+
 
 
 
