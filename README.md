@@ -26,7 +26,7 @@ see the users manual
 ![IMG_1367](https://user-images.githubusercontent.com/13630510/63885449-acc19f00-c9d8-11e9-9ec0-f208ed234d65.png)
 
 
-https://user-images.githubusercontent.com/13630510/63886865-b8fb2b80-c9db-11e9-8237-005ec9a60f6e.png
+![IMG_1359](https://user-images.githubusercontent.com/13630510/63886865-b8fb2b80-c9db-11e9-8237-005ec9a60f6e.png)
 
 
 
