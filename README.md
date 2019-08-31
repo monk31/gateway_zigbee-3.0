@@ -7,8 +7,7 @@ this application can help you
 
 I use a raspberry pi 3 to make a gateway zigbee but you can also use a beaglebone black with ethernet link.
 
-To communicate with zigbee device, I choose a excellent application : "IOT on off", you can download with applestore
-or playstore
+To communicate with my zigbee device, I choose a excellent application on my mobile phone : "IOT on off", you can download with applestore or playstore
 see this link : https://www.iot-onoff.com/ for more details
 
 this project has build with three binary and one script in python
