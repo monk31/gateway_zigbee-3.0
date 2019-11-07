@@ -21,7 +21,7 @@ xiaomi smart plug
 xiaomi device sensor temperature
 lamp hue or compatible
 
-see the users manual
+see mqtt page and check to set appli smartphone
 
 ![IMG_1367](https://user-images.githubusercontent.com/13630510/63885449-acc19f00-c9d8-11e9-9ec0-f208ed234d65.png)
 
