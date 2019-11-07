@@ -1,0 +1,31 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+# YB boot iot V1.2 mqtt
+string=$(hostname -I) || true
+set -f; IFS=' '
+set -- $string
+adress_ip=$1; mac=$2
+set +f; unset IFS
+
+printf "My IP address is $adress_ip\n"
+/usr/local/bin/iot_zb &
+sleep 5
+/usr/local/bin/iot_dbp &
+sleep 5
+/usr/local/bin/iot_ci &
+sleep 5
+
+python3 /home/pi/Documents/zbmqtt_log.py --mqtt_host "$adress_ip" --mqtt_port 1883 &
+#python /home/pi/Documents/zbmqtt_py3_ws_log.py --mqtt_host farmer.cloudmqtt.com --mqtt_port 17507 &
+
+exit 0

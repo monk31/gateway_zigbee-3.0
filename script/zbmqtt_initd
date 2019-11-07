@@ -1,0 +1,21 @@
+#! /bin/sh
+# /etc/init.d/zbmqtt
+ 
+case "$1" in
+  start)
+    echo "Starting zbmqtt"
+    # run application you want to start
+    python /usr/local/sbin/zbmqtt.py &
+    ;;
+  stop)
+    echo "Stopping zbmqtt"
+    # kill application you want to stop
+    killall python
+    ;;
+  *)
+    echo "Usage: /etc/init.d/zbmqtt{start|stop}"
+    exit 1
+    ;;
+esac
+ 
+exit 0
