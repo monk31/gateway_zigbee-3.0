@@ -1,1 +1,0 @@
-python display_temp.py
