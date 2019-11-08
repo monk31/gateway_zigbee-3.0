@@ -1,0 +1,12 @@
+Release Notes
+
+
+0.1
+- First working version of DBP
+- Supports one dbp client only
+- Supports Location from ZigBee (This must be transferred via Wifi)
+- Supports Parent Address and LQI by using Basic Cluster
+
+0.2
+- Supports multi clients
+- Added buffer management to avoid packet drop
