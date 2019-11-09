@@ -29,7 +29,7 @@ see mqtt page and check to set appli smartphone
 ![IMG_1359](https://user-images.githubusercontent.com/13630510/63886865-b8fb2b80-c9db-11e9-8237-005ec9a60f6e.png)
 
 
-
+![power_measure](https://user-images.githubusercontent.com/13630510/68526721-0e5a8f80-02df-11ea-969c-900fc46fd1f5.PNG)
 
 
 
