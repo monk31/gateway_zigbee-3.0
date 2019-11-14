@@ -1,4 +1,4 @@
-# gateway_zigbee
+# gateway_zigbee 3.0
 gateway zigbee 3.0  raspberry JN5169 , home automotion
 
 
