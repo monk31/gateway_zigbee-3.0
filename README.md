@@ -1,5 +1,5 @@
 # gateway_zigbee
-gateway zigbee raspberry JN5169
+gateway zigbee 3.0  raspberry JN5169 , home automotion
 
 
 If you want to control a smart plug ,light a lamp or monitoring temperature with your smartphone
