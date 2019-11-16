@@ -1,19 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Nov 20 21:27:00 2018
-@author: yann brengel
-
-#
-# For the full copyright and license information, please view the LICENSE
-# file that was distributed with this source code.
-
+@author: yann
 """
 #!/usr/bin/python
 
 import paho.mqtt.publish as publish
 import paho.mqtt.client  as paho
 import json
-import socket,select
+import socket
 import sys
 import os
 import logging
@@ -21,6 +16,7 @@ import csv
 import datetime
 import time
 import argparse
+import psutil
 from threading import Timer,Thread
 from pydispatch import dispatcher
 from version import __version__
@@ -279,9 +275,14 @@ class mqtt_publish(Thread):
    def run(self):
       logging.info("start thread publish ")
       while 1:
+         # read_sockets,write_socket, error_socket = select.select(self.inout, self.inout, [])
+         # if len(read_sockets) != 0:
+        #    sur demande utilsateur , envoi liste
         if self.request_list_device == True:
            self.send_list_device()        
         new_data = self.socket.recv(2048)
+        # rx_buffer_temp_length = len(rx_buffer_temp)
+        # recv_buffer = max(recv_buffer, rx_buffer_temp_length)  # keep to the max needed/found
         if len(new_data) != 0:
            #logging.info("message socket = {}".format(new_data))
            list_mess_dbp = self.extract_message(new_data)
@@ -404,6 +405,15 @@ def heartbeat(hearbeat,ip,thread_publish,thread_subscribe):
    else:
       logging.info("thread is dead, system must reboot")
       os.system("sudo reboot")
+   list_proc = psutil.pids()
+   proc = lambda x : psutil.Process(x)
+   process=map(proc,list_proc)
+   found =[p for p in process if p.name()=="iot_dbp"]
+   if not found:
+      logging.info("iot is dead, system must reboot")
+      os.system("sudo reboot")
+      
+   
 
 if __name__ == '__main__':
     
