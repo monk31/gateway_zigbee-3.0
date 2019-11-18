@@ -21,6 +21,7 @@ import csv
 import datetime
 import time
 import argparse
+import psutil
 from threading import Timer,Thread
 from pydispatch import dispatcher
 from version import __version__
@@ -403,6 +404,13 @@ def heartbeat(hearbeat,ip,thread_publish,thread_subscribe):
       publish.single(topic="gateway/heartbeat", payload=jsonstr, hostname=ip,transport="websockets")
    else:
       logging.info("thread is dead, system must reboot")
+      os.system("sudo reboot")
+   list_proc = psutil.pids()
+   proc = lambda x : psutil.Process(x)
+   process=map(proc,list_proc)
+   found =[p for p in process if p.name()=="iot_dbp"]
+   if not found:
+      logging.info("iot is dead, system must reboot")
       os.system("sudo reboot")
 
 if __name__ == '__main__':
