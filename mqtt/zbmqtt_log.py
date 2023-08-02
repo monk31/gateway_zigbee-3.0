@@ -149,14 +149,15 @@ class mqtt_subscribe(Thread):
                logging.info("dispatcher send list device")
          elif topic_search["topic"] == "reset" and payload == "0":   # reset factory
                dispatcher.send(message="request clear device",signal=PUBLISH_SIGNAL, sender=PUBLISH_SENDER)
-         elif topic_search["topic"] == "permit" and payload == "True":          
-            json_string = { topic_search['type'] :  { "setpermit":"1", "duration":180 }}
+               json_string = { topic_search['type']  : { topic_search['topic']: int(msg.payload) }}
+         elif topic_search["topic"] == "permit":          
+            json_string = { topic_search['type'] :  { "setpermit":"1", "duration":180 }}       
          elif topic_search["topic"]  == "plug" or topic_search["topic"]  == "lmp":
             mac = self.get_mac_device(id_device)
             json_string = {  topic_search['type'] : { "mac":mac,"cmd":payload}}        
          else:
             json_string = { topic_search['type']  : { topic_search['topic']: int(msg.payload) }}
-         #logging.info("json string send to controller interface {}".format(json_string))
+         logging.info("json string send to controller interface {}".format(json_string))
          self.wr_json_message(json_string)                  
      # else:
 #         logging.info(" ah bon") 
